@@ -6,4 +6,6 @@ library(shiny)
 runExample("01_hello")
 ``` 
 
-It is a simple application that uses the sidebarLayout, with a sliderInput in the sidebarPanel and a histogram displayed in the mainPanel. My Shiny app modularizes the sidebarPanel part of the sidebarLayout. 
+It is a simple application that uses the sidebarLayout, with a sliderInput in the sidebarPanel and a histogram displayed in the mainPanel. My Shiny app modularizes the sidebarPanel part of the sidebarLayout.
+
+See it in action here: <https://xplor.shinyapps.io/module_example/>

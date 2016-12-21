@@ -16,7 +16,7 @@ function(input, output) {
   output$distPlot <- renderPlot({
     
     # Old Faithful Geyser data
-    x    <- faithful[, 2]  
+    x <- faithful[, 2]  
     
     # Access the reactive value by adding parentheses
     bins <- seq(min(x), max(x), length.out = bins() + 1)

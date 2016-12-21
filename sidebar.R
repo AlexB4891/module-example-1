@@ -8,8 +8,10 @@ sidebarUI <- function(id) {
   # If you want to return multiple UI objects (not used in this example), 
   # wrap them in tagList() 
   tagList(
+    
     # Sidebar with a slider input for number of bins
     sidebarPanel(
+      
       # Wrap all input or output ID's in the UI body in ns()
       sliderInput(ns("bins"), 
                      "Number of bins:", 

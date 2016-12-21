@@ -1,20 +1,15 @@
-
-# This is the user-interface definition of a Shiny web application.
-# You can find out more about building applications with Shiny here:
-#
-# http://shiny.rstudio.com
-#
-
 library(shiny)
 
-shinyUI(fluidPage(
+# Define UI for application that draws a histogram
+fluidPage(
     
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Hello Shiny!"),
   
+  # Sidebar with a slider input for the number of bins
   sidebarLayout(
     
-    # Call the UI function using "one" as the ID
+    # Call the module UI function
     sidebarUI(id = "one"),
     
     # Show a plot of the generated distribution
@@ -22,4 +17,4 @@ shinyUI(fluidPage(
       plotOutput("distPlot")
     )
   )
-))
+)

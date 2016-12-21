@@ -1,26 +1,28 @@
-
-# This is the server logic for a Shiny web application.
-# You can find out more about building applications with Shiny here:
-#
-# http://shiny.rstudio.com
-#
-
 library(shiny)
 
-shinyServer(function(input, output) {
+# Define server logic required to draw a histogram
+function(input, output) {
   
-  # Call callModule and save the reactive expression to an object
+  # Call callModule and save the reactive expression to an object "bins"
   bins <- callModule(module = sidebar, id = "one")
+  
+  # Expression that generates a histogram. The expression is
+  # wrapped in a call to renderPlot to indicate that:
+  #
+  #  1) It is "reactive" and therefore should be automatically
+  #     re-executed when inputs change
+  #  2) Its output type is a plot
   
   output$distPlot <- renderPlot({
     
-    # Crack open the reactive expression with ()'s in order to access the return value
-    x    <- faithful[, 2]
+    # Old Faithful Geyser data
+    x    <- faithful[, 2]  
+    
+    # Access the reactive value by adding parentheses
     bins <- seq(min(x), max(x), length.out = bins() + 1)
     
-    # draw the histogram with the specified number of bins
+    # Draw the histogram with the specified number of bins
     hist(x, breaks = bins, col = 'darkgray', border = 'white')
-    
   })
   
-})
+}

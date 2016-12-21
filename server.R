@@ -9,12 +9,12 @@ library(shiny)
 
 shinyServer(function(input, output) {
   
-  # Call the callModule function and save the reactive expression
+  # Call callModule and save the reactive expression to an object
   bins <- callModule(module = sidebar, id = "one")
   
   output$distPlot <- renderPlot({
     
-    # Crack open the reactive expression with ()'s in order to access the value
+    # Crack open the reactive expression with ()'s in order to access the return value
     x    <- faithful[, 2]
     bins <- seq(min(x), max(x), length.out = bins() + 1)
     

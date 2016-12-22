@@ -1,4 +1,4 @@
-# A Simple Modularized Shiny App
+# module_example_1
 A Shiny module is a piece of code that is included as part of a Shiny app. This simple modularized shiny app is based on the Hello Shiny example that comes with the Shiny package. You can run it by typing the following in the R console:
 
 ``` {.r}

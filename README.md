@@ -8,4 +8,4 @@ runExample("01_hello")
 
 Hello Shiny uses the sidebarLayout, with a sliderInput in the sidebarPanel and a histogram displayed in the mainPanel. My version of the app modularizes the sidebarPanel part of the sidebarLayout. 
 
-You can see it in action here: <https://xplor.shinyapps.io/module_example/>
+You can see it in action here: <https://xplor.shinyapps.io/module_example_1/>
